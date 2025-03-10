@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <array name="preloaded_fonts" translatable="false">
+        <item>@font/baskervville</item>
+        <item>@font/bebas_neue</item>
+        <item>@font/cedarville_cursive</item>
+        <item>@font/montserrat_bold</item>
+        <item>@font/montserrat_medium</item>
+        <item>@font/orbitron</item>
+        <item>@font/press_start_2p</item>
+        <item>@font/roboto</item>
+    </array>
+</resources>
