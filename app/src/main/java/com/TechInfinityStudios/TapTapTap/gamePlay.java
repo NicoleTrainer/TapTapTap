@@ -11,47 +11,73 @@ import androidx.appcompat.app.AppCompatActivity;
 public class gamePlay extends AppCompatActivity {
 
     int choice = 0;
-    CountDownTimer countDownTimer;
+    CountDownTimer countDownTimer, gameStartTimer;
     private View main;
-    int taps=0;
+    int taps = 0;
     boolean isDone = false;
+    boolean gameStarted = false;
+    TextView countdown, timer, tapCount, startingtext;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_gameplay);
-        TextView timer = findViewById(R.id.timeRemaining);
-        TextView tapCount = findViewById(R.id.tapcount);
-        main = findViewById(R.id.actgame);
 
+         countdown = findViewById(R.id.countdown);
+         timer = findViewById(R.id.timeRemaining);
+         tapCount = findViewById(R.id.tapcount);
+         main = findViewById(R.id.actgame);
+         startingtext = findViewById(R.id.startingText);
 
         Intent intent = getIntent();
         choice = intent.getIntExtra("choice", 0);
-        timer(choice, timer);
+
+        // Start pre-game countdown first
+        startPreGameCountdown(countdown, timer);
 
         main.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                if(!isDone) {
+                if (!isDone && gameStarted) { // Only count taps after countdown ends
                     taps++;
                     tapCount.setText("Taps: " + taps);
                 }
             }
         });
-
-
     }
 
-    public  void timer(int choice, TextView timer){
+    private void startPreGameCountdown(TextView countdown, TextView timer) {
+        gameStartTimer = new CountDownTimer(4000, 1000) { // 3..2..1..Go!
+            @Override
+            public void onTick(long millisUntilFinished) {
+                int secondsLeft = (int) (millisUntilFinished / 1000);
+                if (secondsLeft > 0) {
+                    countdown.setText(String.valueOf(secondsLeft));
+                } else {
+                    countdown.setText("Go!");
+                }
+            }
 
+            @Override
+            public void onFinish() {
+                countdown.setVisibility(View.GONE);
+                startingtext.setVisibility(View.GONE);
+                timer.setVisibility(View.VISIBLE);
+                tapCount.setVisibility(View.VISIBLE);
+                gameStarted = true;
+                startGameTimer(choice, timer);
+            }
+        };
+        gameStartTimer.start();
+    }
+
+    private void startGameTimer(int choice, TextView timer) {
         long time = choice * 1000L;
-
-
 
         countDownTimer = new CountDownTimer(time, 1000) {
             @Override
-            public void onTick(long l) {
-                long seconds = (long) Math.ceil(l / 1000.0); // Ensures 1 extra second if any ms remain
+            public void onTick(long millisUntilFinished) {
+                long seconds = (long) Math.ceil(millisUntilFinished / 1000.0);
                 timer.setText(String.valueOf(seconds));
             }
 
@@ -73,12 +99,9 @@ public class gamePlay extends AppCompatActivity {
     }
 
     private void startNewActivity() {
-        Intent intent = new Intent(gamePlay.this, endGame.class );
+        Intent intent = new Intent(gamePlay.this, endGame.class);
         intent.putExtra("taps", taps);
         intent.putExtra("choice", choice);
         startActivity(intent);
     }
-
-
-    }
-
+}
