@@ -1,5 +1,7 @@
 package com.TechInfinityStudios.TapTapTap;
 
+import android.app.AlertDialog;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
@@ -11,6 +13,7 @@ import androidx.appcompat.app.AppCompatActivity;
 public class gameSelection extends AppCompatActivity {
 
     Button btt1, btt2, btt3, btt4;
+    ImageButton infoButton;
     int time;
 
 
@@ -19,7 +22,15 @@ public class gameSelection extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_game_selection);
 
-        ImageButton scoreButton = findViewById(R.id.scoreButton);
+        showDialog();
+
+        infoButton = findViewById(R.id.infoButton);
+        infoButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                showDialog();
+            }
+        });
 
 
         btt1 = findViewById(R.id.time5Sec);
@@ -75,7 +86,21 @@ public class gameSelection extends AppCompatActivity {
 
         }
 
-
+    private void showDialog() {
+        AlertDialog.Builder builder = new AlertDialog.Builder(this);
+        builder.setTitle("How to Play")
+                .setMessage("1. Select the time you want to play for.\n" +
+                        "2. Wait for the timer to start.\n" +
+                        "3. Tap as many times as you can in the time given.\n" +
+                        "4. The game ends when times up. \nYour score is the number of taps you made.")
+                .setPositiveButton("Got it!", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                        dialog.dismiss();
+                    }
+                })
+                .show();
+    }
 
 
 }

@@ -6,15 +6,16 @@
     android:layout_height="match_parent"
     android:background="#7EB0EB"
     tools:context=".endGame">
+
     <ImageButton
-        android:id="@+id/scoreButton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="379dp"
-        android:layout_marginLeft="379dp"
-        android:layout_marginTop="3dp"
-        android:background="@android:drawable/btn_star_big_on"
+        android:id="@+id/infoButton"
+        android:layout_width="60dp"
+        android:layout_height="47dp"
+        android:layout_marginTop="24dp"
+        android:background="@android:drawable/ic_menu_info_details"
+        android:backgroundTint="@color/black"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.954"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -32,7 +33,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.124" />
+        app:layout_constraintVertical_bias="0.191" />
 
     <TextView
         android:id="@+id/totalScore"
@@ -43,12 +44,12 @@
         android:text="0"
         android:textAlignment="center"
         android:textColor="@color/black"
-        android:textSize="75sp"
+        android:textSize="90sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.292" />
+        app:layout_constraintVertical_bias="0.386" />
 
     <TextView
         android:id="@+id/currentHighScore"
@@ -62,9 +63,10 @@
         android:textSize="25sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.704" />
+        app:layout_constraintVertical_bias="0.761" />
 
     <Button
         android:id="@+id/homebutton"
@@ -125,10 +127,10 @@
         android:text="HIGH SCORE!"
         android:textAlignment="center"
         android:textColor="@color/black"
-        android:textSize="45sp"
+        android:textSize="50sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.483" />
+        app:layout_constraintVertical_bias="0.589" />
 </androidx.constraintlayout.widget.ConstraintLayout>

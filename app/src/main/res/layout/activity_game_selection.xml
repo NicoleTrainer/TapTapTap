@@ -7,116 +7,107 @@
     android:background="#7EB0EB">
 
     <ImageButton
-        android:id="@+id/scoreButton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:background="@android:drawable/btn_star_big_on"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.915"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <ImageButton
         android:id="@+id/infoButton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="74dp"
+        android:layout_height="62dp"
+        android:layout_marginTop="16dp"
         android:background="@android:drawable/ic_menu_info_details"
         android:backgroundTint="@color/black"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toEndOf="@+id/scoreButton"
-        app:layout_constraintTop_toTopOf="parent"
-        />
+        app:layout_constraintHorizontal_bias="0.952"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <LinearLayout
         android:id="@+id/linearLayout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="268dp"
-
+        android:layout_marginTop="288dp"
         android:gravity="center_vertical"
         android:orientation="vertical"
+        android:padding="16dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
-
 
         <Button
             android:id="@+id/time5Sec"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="20sp"
+            android:layout_height="80dp"
+            android:layout_marginTop="20dp"
             android:background="@drawable/button_background"
             android:fontFamily="@font/montserrat_medium"
-            android:gravity="center_horizontal"
+            android:gravity="center"
             android:text="5 Seconds"
             android:textAlignment="center"
             android:textColor="@color/black"
-            android:textSize="30sp"
+            android:textSize="36sp"
+            android:padding="16dp"
             app:backgroundTint="@null" />
 
         <Button
             android:id="@+id/time10Sec"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="20sp"
+            android:layout_height="80dp"
+            android:layout_marginTop="20dp"
             android:background="@drawable/button_background"
             android:fontFamily="@font/montserrat_medium"
-            android:gravity="center_horizontal"
+            android:gravity="center"
             android:text="10 Seconds"
             android:textAlignment="center"
             android:textColor="@color/black"
-            android:textSize="30sp"
-            app:backgroundTint="@null"
-
-            />
+            android:textSize="36sp"
+            android:padding="16dp"
+            app:backgroundTint="@null" />
 
         <Button
             android:id="@+id/time30Sec"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="20sp"
+            android:layout_height="80dp"
+            android:layout_marginTop="20dp"
             android:background="@drawable/button_background"
             android:fontFamily="@font/montserrat_medium"
-            android:gravity="center_horizontal"
+            android:gravity="center"
             android:text="30 Seconds"
             android:textAlignment="center"
             android:textColor="@color/black"
-            android:textSize="30sp"
+            android:textSize="36sp"
+            android:padding="16dp"
             app:backgroundTint="@null" />
 
         <Button
             android:id="@+id/time60Sec"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="20sp"
+            android:layout_height="80dp"
+            android:layout_marginTop="20dp"
             android:background="@drawable/button_background"
             android:fontFamily="@font/montserrat_medium"
-            android:gravity="center_horizontal"
+            android:gravity="center"
             android:text="60 Seconds"
             android:textAlignment="center"
             android:textColor="@color/black"
-            android:textSize="30sp"
+            android:textSize="36sp"
+            android:padding="16dp"
             app:backgroundTint="@null" />
 
     </LinearLayout>
 
+
     <TextView
-        android:layout_width="384dp"
-        android:layout_height="142dp"
+        android:layout_width="390dp"
+        android:layout_height="191dp"
         android:fontFamily="@font/montserrat_bold"
         android:gravity="center_horizontal"
         android:text="@string/select_a_time"
         android:textAlignment="center"
         android:textColor="@color/black"
-        android:textSize="60sp"
+        android:textSize="70sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.407"
+        app:layout_constraintHorizontal_bias="0.476"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.129" />
+        app:layout_constraintVertical_bias="0.162" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
