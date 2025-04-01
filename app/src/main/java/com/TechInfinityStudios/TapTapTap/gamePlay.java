@@ -12,6 +12,7 @@ import androidx.appcompat.app.AppCompatActivity;
 public class gamePlay extends AppCompatActivity {
 
     int choice = 0;
+    int level = 0;
     CountDownTimer countDownTimer, gameStartTimer;
     private View main;
     int taps = 0;
@@ -32,6 +33,7 @@ public class gamePlay extends AppCompatActivity {
 
         Intent intent = getIntent();
         choice = intent.getIntExtra("choice", 0);
+        level = intent.getIntExtra("level", 0);
 
         // Start pre-game countdown first
         startPreGameCountdown(countdown, timer);
@@ -103,6 +105,7 @@ public class gamePlay extends AppCompatActivity {
         Intent intent = new Intent(gamePlay.this, endGame.class);
         intent.putExtra("taps", taps);
         intent.putExtra("choice", choice);
+        intent.putExtra("level", level);
         startActivity(intent);
     }
 }

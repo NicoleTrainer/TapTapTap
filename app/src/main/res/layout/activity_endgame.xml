@@ -15,7 +15,16 @@
         android:background="@android:drawable/ic_menu_info_details"
         android:backgroundTint="@color/black"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.954"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageButton
+        android:id="@+id/scoreButton"
+        android:layout_width="60dp"
+        android:layout_height="47dp"
+        android:layout_marginTop="24dp"
+        android:background="@android:drawable/btn_star_big_on"
+        app:layout_constraintEnd_toStartOf="@+id/infoButton"
+        app:layout_constraintHorizontal_bias="0.975"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -121,13 +130,13 @@
 
     <TextView
         android:id="@+id/scoreMessage"
-        android:layout_width="451dp"
-        android:layout_height="86dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:fontFamily="@font/montserrat_bold"
         android:text="HIGH SCORE!"
         android:textAlignment="center"
         android:textColor="@color/black"
-        android:textSize="50sp"
+        android:textSize="40sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"

@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <!-- Title -->
+    <TextView
+        android:id="@+id/scoreTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="High Scores"
+        android:textSize="22sp"
+        android:textStyle="bold"
+        android:textColor="@color/purple_500"
+        android:layout_gravity="center"
+        android:paddingBottom="10dp"/>
+
+    <!-- Level Buttons -->
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center">
+
+        <Button
+            android:id="@+id/level1Button"
+            style="@style/ScoreButtonStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="5 Secs"/>
+        <Button
+            android:id="@+id/level2Button"
+            style="@style/ScoreButtonStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="10 Secs"/>
+        <Button
+            android:id="@+id/level3Button"
+            style="@style/ScoreButtonStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="30 Secs"/>
+        <Button
+            android:id="@+id/level4Button"
+            style="@style/ScoreButtonStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="60 Secs"/>
+    </LinearLayout>
+
+    <!-- RecyclerView for scores -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/scoreRecyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:background="#E2E2E2"
+        android:padding="10dp"/>
+
+    <!-- Close Button -->
+    <Button
+        android:id="@+id/closeButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Close"
+        android:backgroundTint="@color/purple_500"
+        android:textColor="@android:color/white"
+        android:layout_gravity="center"
+        android:layout_marginTop="10dp"/>
+</LinearLayout>

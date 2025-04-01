@@ -10,7 +10,7 @@
 
     <TextView
         android:id="@+id/title"
-        android:layout_width="423dp"
+        android:layout_width="400dp"
         android:layout_height="240dp"
         android:contentDescription="@string/title_tap_tap_tap"
         android:fontFamily="@font/montserrat_bold"
@@ -19,7 +19,7 @@
         android:text="@string/tap_tap_tap"
         android:textAlignment="center"
         android:textColor="@color/black"
-        android:textSize="90sp"
+        android:textSize="80dp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -29,8 +29,8 @@
 
     <Button
         android:id="@+id/startButton"
-        android:layout_width="240dp"
-        android:layout_height="107dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:background="@drawable/button_background"
         android:contentDescription="@string/start_button"
         android:fontFamily="@font/montserrat_medium"
